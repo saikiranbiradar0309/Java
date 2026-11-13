@@ -1,0 +1,222 @@
+01. Type Casting
+
+    - What if we really want to change the type of a variable, can we do that?
+
+    - Type casting in Java means converting a value from one data type into another data type.
+
+    - For example:
+        a. Converting int into double.
+        b. Converting double into int.
+        c. Converting int into String (using conversion methods).
+    
+    - Java supports two main types of casting:
+        a. Widening Casting (Implicit Casting)
+        b. Narrowing Casting (Explicit Casting)
+
+==================================================
+
+
+02. Implicit Casting
+
+    - Converting a smaller data type into a larger data type.
+
+    - Java does this conversion automatically. You don't need to write anything extra.
+
+    - Widening Order
+        byte  --> short  --> int  --> long  --> float  --> double
+
+==================================================
+
+
+03. Explicit Casting
+
+    - Converting a larger data type into a smaller data type.
+
+    - Java does not do this automatically. You must explicitly specify the target data type using parentheses.
+
+    - Important: The decimal portion is lost. Java does not round the number.
+
+
+==================================================
+
+
+04. Type Promotion
+
+    - Type promotion in Java means Java automatically converts a smaller data type into a larger data type 
+      while performing an operation or calculation.
+
+    - In simple words, when you perform mathematical operations on different primitive data types, Java may 
+      automatically promote the smaller data type to a larger compatible data type before calculating the result.
+    
+    - You might have a question:
+        - Both a and b are byte variables. Why is the result stored in an int?
+            - Because Java automatically promotes byte, short and char to int when performing arithmetic operations.
+
+==================================================
+
+
+05. Operators
+
+    - In Java, operators are special symbols that perform operations on variables and values.
+
+    - In simple words, operators tell Java what action to perform, such as addition, subtraction, comparison, 
+      or assigning a value.
+
+
+==================================================
+
+
+06. Arithmetic Operators
+
+    - Arithmetic operators are used to perform mathematical calculations.
+
+    Operator	        Name	                 Example	        Result
+    +	                Addition	            10 + 5	            15
+    -	                Subtraction	            10 - 5	            5
+    *	                Multiplication	        10 * 5	            50
+    /	                Division	            10 / 5	            2
+    %	                Modulus	                10 % 3	            1
+
+
+==================================================
+
+
+07. Assignment Operators
+
+    - Assignment operators are used to assign values to variables or update their values.
+
+
+    Operator	                        Example	                Equivalent to
+    =	                                a = 10	                Assign 10
+    +=	                                a += 5	                a = a + 5
+    -=	                                a -= 5	                a = a - 5
+    *=	                                a *= 5	                a = a * 5
+    /=	                                a /= 5	                a = a / 5
+    %=	                                a %= 3	                a = a % 3
+
+
+==================================================
+
+
+08. Unary Operators
+
+    - Unary Opeartors operate on only one operand.
+
+
+        Operator	            Meaning
+        +	                    Positive value
+        -	                    Negative value
+        ++	                    Increment by 1
+        --	                    Decrement by 1
+        !	                    Reverse boolean value
+        ~	                    Bitwise complement
+
+
+==================================================
+
+09. Relational Operators (Comparision Operators)
+
+    - These operators compare two values and return a boolean result (true or false).
+
+    Operator	                            Meaning	                    Example
+    ==	                                    Equal to	                10 == 10 → true
+    !=	                                    Not equal to	            10 != 20 → true
+    >	                                    Greater than	            20 > 10 → true
+    <	                                    Less than	                10 < 20 → true
+    >=	                                    Greater than or equal to	10 >= 10 → true
+    <=	                                    Less than or equal to	    10 <= 5 → false
+
+==================================================
+
+
+10. Logical Operators
+
+    - Logical operators are used to combine multiple conditions.
+
+    - Java has three main logical operators:
+
+        | Operator     | Name               | Meaning                                       |
+        |   ---        |---                 |---                                            |
+        |   &&         | Logical AND        | Both conditions must be true                  |
+        |   ||         | Logical OR         | At least one condition must be true           |
+        |   !          | Logical NOT        | Reverses the boolean result                   |
+
+
+
+==================================================
+
+
+11. Conditional Statements
+
+    - Conditional statements in Java are used to make decisions in a program based on whether a condition 
+      is true or false.
+    
+    - In simple words, conditional statements tell Java:
+        a. If a condition is true, execute one block of code.
+        b. If a condition is false, execute another block of code.
+
+==================================================
+
+
+12. if Statement
+
+    - The if statement executes a block of code only when the given condition is true.
+
+==================================================
+
+13. if-else Statement
+
+    - The if-else statement is used when you have two possible outcomes.
+        a. If the condition is true, execute the if block.
+        b. If the condition is false, execute the else block.
+
+==================================================
+
+14. if-else-if Ladder
+    
+    - Suppose you have multiple conditions to check.
+    
+    - For example, you want to calculate a student's grade based on marks.
+   
+    - You have five possible grades:
+
+            Marks	            Grade
+            90–100	             A
+            80–89	             B
+            70–79	             C
+            60–69	             D
+            Below 60	        Fail
+    
+    - Using multiple independent if statements is not ideal here.
+
+    - Instead, we use an if-else-if ladder.
+
+==================================================
+
+
+15. Nested if Statement
+
+    - A nested if means writing one if statement inside another if statement.
+
+    - We use this when a second condition should be checked only after the first condition is satisfied.
+
+    - Example: Imagine an application where a user must be eligible by age and must also have a valid ID.
+
+==================================================
+
+
+16. switch Statement
+
+    - The switch statement is used when you want to execute different blocks of code based on the value of 
+      a variable or expression.
+
+    - For example, imagine an e-commerce application where:
+        a. 1 = View Products
+        b. 2 = Add to Cart
+        c. 3 = Place Order
+        d. 4 = Logout
+    
+    - Instead of writing multiple if-else-if conditions, you can use switch.
+
+    
+==================================================

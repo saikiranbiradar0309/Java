@@ -1,0 +1,275 @@
+
+Java is platform Independent
+
+
+As a programmer we write a java code, and compiler (javac) compiles the code to byte code then we take this
+byte code and we run on JVM, once JVM says ok it will look for main it should be there in code and then you
+will get output
+
+
+JVM is a part of JRE, and JVM has libraries, Whenever we run something it runs inside JRE, and JVM is responsible
+to run it.
+
+
+====================================================================
+
+
+01. What is class in Java?
+
+    - In simple terms, a class in Java is blueprint or template used to create objects.
+
+    - Think of it as house construction plan
+      a. Class: Blueprint of a house.
+      b. Object: Actual house built using that blueprint.
+
+    - Similarly, in Java:
+      a. Class: Blueprint that defines properties (variables) and behaviours (methods).
+      b. Object: An actual instance created using that class.
+
+
+====================================================================
+
+
+02. Writing First Java Code
+
+        class Hello
+        {
+            public static void main(String[] args)
+            {
+                System.out.println("Hello World");
+            }
+        }
+
+
+====================================================================
+
+
+03. Variables
+
+    - A Variable in Java is a container used to store data or information in a program.
+
+    - Think about a water bottle. A bottle stores water. Similarly, a variable stores data such as a name, 
+      age, salary, marks, etc.
+    
+    - Real-time Example:
+        Imagine you are developing a Student Management System.
+
+        You need to store:
+            a. Student name
+            b. Student age
+            c. Student marks
+
+        In java:
+            int studentAge = 28;
+            String studentName = "Saikiran";
+            double studentMarks = 85.5;
+        
+
+
+====================================================================
+
+
+04. Important Java data types
+
+    a. int
+
+        - Stores whole numbers
+
+            int age =25;
+            int marks = 85;
+    
+    --------------------------
+
+    b. long
+
+        - Stores large whole numbers
+            int salary = 50876800l;
+            int mobileNo = 9886787532l;
+
+    --------------------------
+
+    c. float
+
+        - Stores Decimal Numbers
+            float marks = 68.5f;
+            float price = 1680.97f;
+    
+
+    --------------------------
+
+    d. double
+
+        - Stores Decimal Numbers
+            double salary = 66576745.55345;
+
+
+    --------------------------
+
+    e. char
+
+        - Stores Single Character
+            char grade = 'A';
+    
+
+    --------------------------
+
+    f. boolean
+
+        - True or false
+            boolean isActive = true;
+    
+
+    --------------------------
+
+    g. String
+
+        - Stores Text
+            String name = "Saikiran";
+
+
+
+====================================================================
+
+
+Vairable Example 1
+
+class variable
+{
+    public static void main(String[] agrs)
+    {
+        int num = 2;
+        System.out.println(num);
+    }
+}
+
+
+====================================================================
+
+
+
+Variable Example 2
+
+class variable
+{
+    public static void main(String[] agrs)
+    {
+        int num1 = 2;
+        int num2 = 5;
+        System.out.println(num1 + num2);
+    }
+}
+
+
+====================================================================
+
+
+Its not a good practice to add conditional statements inside print statement so lets try this
+
+
+class variable
+{
+    public static void main(String[] agrs)
+    {
+        int num1 = 2;
+        int num2 = 5;
+
+        int result = num1 + num2;
+
+        
+        System.out.println(result);
+    }
+}
+
+
+====================================================================
+
+
+05. Why java is called strongly typed language and what do you mean by it?
+
+    - Java is called Strongly Typed Language because every variable must have a clearly defined
+      data type, and Java strictly checks whether you are using correct type of data.
+
+
+
+====================================================================
+
+
+06. Why we get Compilation Error in Java?
+
+    - In Java, a Compilation Error occurs when your Java code violates Java's syntax rules, type rules, or 
+      other compile-time rules.
+
+    - In simple terms, Java checks your code before executing it. If it finds certain mistakes, it stops 
+      compilation and displays an error.
+
+    - Common reasons for compilation errors
+
+        a. Missing semicolon
+        b. Incorrect data type
+        c. Incorrect variable declaration
+        d. Using an undeclared variable
+        e. Missing brackets
+
+
+====================================================================
+
+03. Primitive Data Types
+
+    - Primitive data types are the 8 basic built-in data types provided by Java to store simple values.
+
+    - Java has exactly 8 primitive data types.
+
+    - They are:
+        1. byte
+            - Size: 1 byte (8 bits)
+            - Range: -128 to 127
+            - Used when you need to store small whole numbers.
+
+
+        2. short
+            - Size: 2 bytes (16 bits)
+            - Range: -32,768 to 32,767
+            - Used for whole numbers that are larger than the byte range but fit within the short range.
+
+
+        3. int
+            - Size: 4 bytes (32 bits)
+            - Range: -2,147,483,648 to 2,147,483,647
+            - Most commonly used integer data type in Java.
+
+
+        4. long
+            - Size: 8 bytes (64 bits)
+            - Range: -2⁶³ to 2⁶³ - 1
+            - Used for very large whole numbers.
+            - Notice the L at the end.
+            - Java uses L to identify a long literal.
+
+
+        5. float
+            - Size: 4 bytes (32 bits)
+            - Precision: Approximately 6–7 decimal digits.
+            - Used to store decimal numbers with single precision.
+            - Notice the f at the end.
+
+
+        6. double
+            - Size: 8 bytes (64 bits)
+            - Precision: Approximately 15–16 decimal digits.
+            - Used for decimal values with double precision.
+
+
+        7. char
+            - Size: 2 bytes (16 bits)
+            - Used to store a single UTF-16 code unit.
+            - Values are written inside single quotes.
+            - Single quotes are used for a char.
+            - Double quotes are used for a String.
+
+
+        8. boolean
+            - Stores only two values: true or false.
+            - Used for decision-making and conditions.
+    
+
+====================================================================

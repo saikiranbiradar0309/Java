@@ -1,0 +1,146 @@
+01. Ternary Operator
+
+    - The ternary operator (?:) in Java is a conditional operator used to make decisions.
+
+    - It is a shorter alternative to a simple if-else statement.
+
+    - It evaluates a condition and returns one of two values depending on whether the condition 
+      is true or false.
+    
+    - Think of it as:
+        If this condition is true, return this value; otherwise, return another value.
+    
+    - Syntax:
+        variable = (condition) ? valueIfTrue : valueIfFalse;
+
+    - Let's understand each part:
+
+        Part	                    Meaning
+        condition	                Expression that returns true or false
+        ?	                        Separates condition from true result
+        valueIfTrue	                Value returned if condition is true
+        :	                        Separates true and false results
+        valueIfFalse	            Value returned if condition is false
+    
+
+    - Remember:
+        a. If the condition is true, Java selects the value after ?.
+        b. If the condition is false, Java selects the value after :.
+
+
+
+==============================================================
+
+
+02. Break Statement in Java
+
+    - The break statement in Java is used to immediately terminate a loop or a switch statement.
+
+    - When Java encounters break, it exits the current loop or switch block and continues executing 
+      the code that comes after it.
+    
+    - In simple words:
+        Break means: Stop the current loop immediately.
+
+
+
+    a. Why do we use break?
+        - Suppose you have a loop that runs 10 times, but you want to stop it when the number reaches 5.
+
+        - Instead of allowing the loop to complete all 10 iterations, you can use break.
+
+
+
+==============================================================
+
+
+03. Loops in Java
+
+    - A loop in Java is used to execute a block of code repeatedly until a particular condition becomes false.
+
+    - In simple words:
+        - Imagine you want to print "Hello Java" 10 times.
+        - Without a loop, you would write System.out.println() 10 times.
+        - With a loop, you write the statement once, and Java executes it 10 times automatically.
+    
+    - Loop = Repeating a block of code.
+
+
+==============================================================
+
+
+03. For Loop
+
+    - A for loop is generally used when you know the number of iterations in advance.
+
+    - Syntax:
+        for(initialization ; condition ; increment/decrement )
+        {
+            // Code to execute repeatedly
+        }
+
+
+    - There are 3 Important points
+
+        Part	                    Meaning
+        Initialization	            Starting point
+        Condition	                Checks whether the loop should continue
+        Increment/Decrement	        Updates the variable after each iteration
+
+==============================================================
+
+
+04. While Loop  
+
+    - A while loop executes repeatedly as long as its condition is true.
+
+    - Syntax:
+        while (condition)
+        {
+            // Code to execute repeatedly
+        }
+    
+    
+    - Important: In a while loop, don't forget to update the variable. Otherwise, you might create an 
+      infinite loop.
+
+==============================================================
+
+
+05. do-while loop   
+
+    - The do-while loop is slightly different.
+
+    - It executes the code first and checks the condition afterward.
+
+    - Syntax:
+        do
+        {
+            // Code to Execute
+        } while(condition);
+
+
+==============================================================
+
+
+06. Enhanced For Loop (For-each Loop)
+
+    - Java also provides an enhanced for loop, commonly called a for-each loop.
+
+    - It is used to iterate through arrays and collections.
+
+    - For example, imagine you have five employee names and want to print each name.
+
+    - Understand this statement:
+        for (String name : employees)
+
+            a. String = Data type.
+            b. name = Variable that holds the current employee name.
+            c. employees = Array from which Java gets values.
+            d. : = Read each element from the array one by one.
+
+
+            You don't need to manage an index manually.
+
+
+==============================================================

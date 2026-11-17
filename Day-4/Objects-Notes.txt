@@ -1,0 +1,217 @@
+01. Objects In Java
+
+    - In Java, an object is an instance of a class.
+
+    - An object represents something that has:
+        a. State – Data or properties of an object.
+        b. Behaviour – Actions or methods an object can perform.
+        c. Identity – A unique identity that distinguishes one object from another.
+    
+    - For example, think about a car. A car has properties:
+        a. Brand
+        b. color
+        c. Model
+        d. Speed
+    
+    - A car also has behaviours:   
+        a. Start
+        b. Stop
+        c. Accelerate
+        d. Brake
+    
+    - In Java, we represent such things using classes and objects.
+
+
+
+================================================================================
+
+
+02. What is a class and what is an object?
+
+    - First, understand this important difference.
+
+        a. Class = Blueprint or design.
+
+        b. Object = Actual instance created using that blueprint.
+    
+
+    - Imagine a house construction project.
+        a. A blueprint describes how a house should be constructed.
+        b. The actual house is built using that blueprint.
+        c. You can build multiple houses using the same blueprint.
+    
+
+    - Similarly, in Java:
+        a. Class is the blueprint.
+        b. Object is the actual instance.
+        c. You can create multiple objects from the same class.
+    
+
+
+================================================================================
+
+
+03. Real-time Java example
+    
+    - Imagine you are developing an Employee Management System.
+
+    - You need to store employee information.
+
+    - Every employee has:
+        a. Employee ID
+        b. Employee Name
+        c. Salary
+    
+    - Instead of creating separate variables for every employee, you can create an Employee class and 
+      multiple objects.
+
+
+================================================================================
+
+
+04. How do we create objects in Java?
+
+    a. Create a class
+
+
+        public class Employee
+        {
+            // Properties (State)
+            int empId;
+            String empName;
+            double salary;
+
+            // Behaviour (Method)
+            void work()
+            {
+                System.out.println("Employee is Working");
+            }
+        }
+
+    
+        - Let's understand this code:
+
+                Code	                     Explanation
+                public class Employee	     Creates a class named Employee
+                int empId	                 Employee ID
+                String empName	             Employee name
+                double salary	             Employee salary
+                void work()	                 Method representing employee behaviour
+        
+
+        - At this point, we have only created a class.
+
+        - We have not created any Employee objects yet.
+
+
+    ------------------------------------------------
+
+    b. Create an object
+
+        - Now create another class with the main() method.
+
+                public class Main
+                {
+                    public static void main(String[] args)
+                    {
+                        Employee emp1 = new Employee();
+                    }
+                }
+        
+
+        - This statement creates an object:
+            Employee emp1 = new Employee();
+        
+
+        - Let's break this statement into four parts.
+            a. Employee : 
+                - This is the class name and the type of the reference variable.
+                - It tells Java that emp1 can refer to an Employee object.
+
+            b. emp1 :
+                - This is the reference variable.
+                - It stores a reference to the object, allowing us to access its properties and methods.
+
+            c. new  :
+                - This is a Java keyword used to create an object.
+                - It requests memory allocation for a new object.
+
+            d. Employee(): 
+                - This calls the constructor of the Employee class.
+                - A constructor is responsible for initializing a newly created object.
+================================================================================
+
+
+05. Complete example – Creating and using objects
+
+            public class Main
+            {
+                // Creating an object
+                Employee emp1 = new Employee();
+
+
+                // Assigning values
+                emp1.empId = 101;
+                emp1.empName = "Saikiran";
+                emp1.salary = 123000;
+
+
+                // Accessing object properties
+                System.out.println(emp1.empId);
+                System.out.println(emp1.empName);
+                System.out.println(emp1.salary);
+
+
+                // Calling object method
+                emp1.work();
+            }
+
+
+            output:
+                101
+                Saikiran
+                123000
+                Employee is Working
+
+================================================================================
+
+
+06. Can we create multiple objects from one class?
+
+    - Yes! This is one of the most important concepts in Java.
+
+    - Let's create three Employee objects.
+
+            class Employee {
+
+                int empId;
+                String empName;
+
+            }
+
+            public class Main {
+
+                public static void main(String[] args) {
+
+                    Employee emp1 = new Employee();
+
+                    Employee emp2 = new Employee();
+
+                    Employee emp3 = new Employee();
+
+                    emp1.empId = 101;
+                    emp1.empName = "Rahul";
+
+                    emp2.empId = 102;
+                    emp2.empName = "Kiran";
+
+                    emp3.empId = 103;
+                    emp3.empName = "John";
+
+                    System.out.println(emp1.empName);
+                    System.out.println(emp2.empName);
+                    System.out.println(emp3.empName);
+                }
+            }
+
+================================================================================

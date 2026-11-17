@@ -1,0 +1,138 @@
+01. What is a Local Variable?
+
+    - A Local Variable is a variable declared inside a method, constructor, or a block of code.
+
+    - It can only be accessed within the block where it is declared.
+
+            public class Employee {
+
+                public void employeeDetails() {
+
+                    // Local variables
+                    String name = "Saikiran";
+                    int age = 28;
+
+                    System.out.println(name);
+                    System.out.println(age);
+                }
+
+                public static void main(String[] args) {
+
+                    Employee emp = new Employee();
+
+                    emp.employeeDetails();
+
+                }
+            }
+    
+
+
+    - Explanation:
+        a. name is a local variable.
+        b. age is a local variable.
+        c. Both variables are declared inside the employeeDetails() method.
+        d. We can access them only inside that method.
+
+    
+    - What happens if you try to access name from another method?
+            public void display() {
+                System.out.println(name); // Compilation error
+            }
+    
+
+
+    - Compilation Error: Why?
+        Because name is a local variable of employeeDetails(). It is not accessible outside that method.
+
+
+    - Important points about Local Variables
+        a. Declared inside methods, constructors or blocks.
+        b. Their scope is limited to the block in which they are declared.
+        c. They do not get default values.
+        d. You must initialize them before using them.
+        e. They exist during the execution of their containing block.
+    
+
+
+    - For example:
+            public void test() {
+                int a;
+                System.out.println(a); // Compilation error
+            }
+    
+
+    - You must initialize it:
+            public void test() {
+                int a = 10;
+                System.out.println(a); // 10
+            }
+
+
+
+===================================================================================
+
+
+02. What is an Instance Variable?
+
+    - An Instance Variable is a variable declared inside a class but outside methods, 
+      constructors, and blocks.
+    
+    - It belongs to an object of that class.
+            public class Employee {
+
+                // Instance variables
+                String name;
+                int age;
+
+                public void employeeDetails() {
+
+                    System.out.println(name);
+                    System.out.println(age);
+
+                }
+
+                public static void main(String[] args) {
+
+                    Employee emp = new Employee();
+
+                    emp.name = "Saikiran";
+                    emp.age = 28;
+
+                    emp.employeeDetails();
+
+                }
+            }
+    
+
+
+
+
+
+    - They are declared directly inside the class, outside the method.
+
+    - Therefore, they are instance variables.
+
+    - We can access them using the object:
+        emp.name = "Saikiran";
+        emp.age = 28;
+    
+
+
+
+
+
+
+
+    Why are they called Instance Variables?
+        - Because every object (instance) gets its own copy of these variables.
+
+
+    
+    Important points about Instance Variables
+        a. Declared inside a class but outside methods and constructors.
+        b. Each object gets its own copy.
+        c. They receive default values if not explicitly initialized.
+        d. They can be accessed throughout the instance methods of the class, subject to 
+           access restrictions.
+        e. They exist as long as the object remains reachable and is not garbage-collected.
+===================================================================================

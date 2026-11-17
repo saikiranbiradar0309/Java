@@ -1,0 +1,299 @@
+01. Methods in Java
+
+    - In Java, a method is a block of code that performs a particular task when it is called.
+
+    - In simple words:
+        Imagine you are developing an Employee Management System.
+
+        You need to perform different operations:
+            a. Add an employee.
+            b. Update employee details.
+            c. Delete an employee.
+            d. Display employee details.
+    
+    - Instead of writing all the code inside the main() method, you can create separate methods for 
+      each operation.
+    
+    - For example:
+
+            addEmployee();
+            updateEmployee();
+            deleteEmployee();
+            displayEmployee();
+    
+
+    - Each method performs a specific task.
+
+    - Method = A reusable block of code designed to perform a particular operation.
+
+
+===========================================================================
+
+
+02. Why do we need methods in Java?
+
+    - Let's understand with an example.
+
+    - Suppose you want to print employee details three times.
+
+    - Without methods:
+
+            public class Main {
+
+                public static void main(String[] args) {
+
+                    System.out.println("Employee ID: 101");
+                    System.out.println("Employee Name: Rahul");
+
+                    System.out.println("Employee ID: 102");
+                    System.out.println("Employee Name: Kiran");
+
+                    System.out.println("Employee ID: 103");
+                    System.out.println("Employee Name: John");
+                }
+            }
+    
+
+    - Here, we are writing the same type of logic repeatedly.
+
+    - Instead, we can create a method.
+
+            public class Main {
+
+                static void displayEmployee() {
+
+                    System.out.println("Employee details");
+
+                }
+
+                public static void main(String[] args) {
+
+                    displayEmployee();
+                    displayEmployee();
+                    displayEmployee();
+
+                }
+            }
+    
+
+    - Output:
+            Employee details
+            Employee details
+            Employee details
+    
+
+    - We wrote the method once and called it three times.
+
+
+    - Benefits of methods
+        a. Code reusability – Write once and use multiple times.
+        b. Code readability – Makes code easier to understand.
+        c. Code maintainability – Easier to modify and debug.
+        d. Code organization – Divides large programs into smaller tasks.
+        e. Avoids code duplication – No need to write the same logic repeatedly.
+
+
+
+===========================================================================
+
+
+03. How do we create a method in Java?
+
+    - Let's understand the syntax.
+
+    - Syntax
+            accessModifier returnType methodName(parameters) {
+
+                // Method body
+
+            }
+        
+    - Let's break down each component.
+
+            Component	            Meaning
+            accessModifier	        Defines where the method can be accessed
+            returnType	            Specifies what type of value the method returns
+            methodName	            Name of the method
+            parameters	            Inputs accepted by the method
+            Method body	            Actual code executed by the method
+    
+
+    - Example
+        public int addNumbers(int a, int b)
+        {
+            int sum = a + b;
+            return sum;
+        }
+
+===========================================================================
+
+
+04. How do we call a method in Java?
+
+    - Creating a method and calling a method are two different things.
+
+    - Method declaration: Writing the method and its implementation.
+
+    - Method calling: Executing the method by invoking its name.
+
+    - Let's understand with an example.
+
+        public class Main
+        {
+            static void greet()
+            {
+                System.out.println("Welcome to Java");
+            }
+
+            public static void main(String[] args)
+            {
+                greet();
+            }
+        }
+    
+
+    - Output:
+        Welcome to Java
+
+    
+    - Important: In this example, greet() is static, so we can call it directly from the static main() method.
+
+
+
+===========================================================================
+
+
+05. Types of methods in Java
+
+    a. No parameters – No return value
+    b. Parameters – No return value
+    c. No parameters – Return value
+    d. Parameters – Return value
+
+===========================================================================
+
+
+06. No parameters and no return value
+
+    public class Main
+    {
+        static void displayMessage()
+        {
+            System.out.println("Message is Displayed")
+        }
+
+        public static void main(String[] args)
+        {
+            displayMessage();
+        }
+    }
+
+
+
+    Output:
+        Message is Displayed
+
+===========================================================================
+
+
+07. No parameters – Return value
+
+
+    public class Main
+    {
+        static int total(int a, int b)
+        {
+            return a+b;
+        }
+
+
+        public static void main(String[] args)
+        {
+            int sum = total(5,6);
+            System.out.println("Total Value Is: " + sum );
+        }
+    }
+
+
+===========================================================================
+
+
+08. Parameters – No return value
+
+    public class Main
+    {
+        static String name(String EmpName)
+        {
+            System.out.println(EmpName);
+        }
+
+        public static void main(String[] args)
+        {
+            name("Saikiran");
+        }
+    }
+
+===========================================================================
+
+
+09. Parameters – Return value
+
+    public class Main
+    {
+        static int add(int a, int b)
+        {
+            return a + b;
+        }
+
+        public static void main(String[] args)
+        {
+           int total = add(1,5);
+           System.out.println(total);
+        }
+    }
+
+===========================================================================
+
+
+10. What is the difference between void and return?
+
+    - This is a very important Java interview question.
+
+    a. using void
+            static void add(int a, int b) {
+
+                int sum = a + b;
+
+                System.out.println(sum);
+
+            }
+
+
+        - Here, the method performs the addition and prints the result.
+
+        - It does not return the result to the calling method.
+
+
+    b. Using return
+                static int add(int a, int b) {
+
+                    int sum = a + b;
+
+                    return sum;
+
+                }
+
+        - Here, the method returns the result to the calling method.
+
+        - You can use that result for other operations.
+
+        - For example:
+                int result = add(10, 20);
+
+                int finalResult = result * 2;
+
+                System.out.println(finalResult);
+        
+        - Output: 60
+
+===========================================================================

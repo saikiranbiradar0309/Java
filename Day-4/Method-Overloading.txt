@@ -1,0 +1,208 @@
+01. What is Method Overloading?
+
+    - Method Overloading means creating multiple methods with the same name but different parameters 
+      within the same class.
+    
+    - In simple words:
+        You can create multiple methods with the same name, but each method should accept different 
+        parameters.
+    
+    - For example:
+            public class calculator
+            {
+                public void add(int a, int b)
+                {
+                    System.out.println(a + b);
+                }
+
+                public void add(int a, int b, int c) 
+                {
+                    System.out.println(a + b + c);
+                }
+
+                public void add(double a, double b) 
+                {
+                    System.out.println(a + b);
+                }
+            }
+    
+    - Here, we have three methods with the same name: add(). But their parameters are different.
+
+
+
+========================================================================================
+
+
+02. Why do we use Method Overloading?
+
+    - Imagine you are developing a calculator application.
+
+    - You want to perform addition in three different ways:
+        a. Add two numbers.
+        b. Add three numbers.
+        c. Add two decimal numbers.
+    
+    - Without method overloading, you might create methods like:
+            public class Calculator {
+
+                public void addTwoNumbers(int a, int b) {
+                    System.out.println(a + b);
+                }
+
+                public void addThreeNumbers(int a, int b, int c) {
+                    System.out.println(a + b + c);
+                }
+
+                public void addDecimalNumbers(double a, double b) {
+                    System.out.println(a + b);
+                }
+            }
+
+
+
+    - This works perfectly fine.
+
+    - But notice that we are using different method names for the same operation.
+
+    - With method overloading:
+            public class Calculator {
+
+                public void add(int a, int b) {
+                    System.out.println(a + b);
+                }
+
+                public void add(int a, int b, int c) {
+                    System.out.println(a + b + c);
+                }
+
+                public void add(double a, double b) {
+                    System.out.println(a + b);
+                }
+            }
+    
+    - Now we have one common method name: add().
+
+
+
+    - Benefits:
+        a. Code readability improves.
+        b. Code becomes easier to maintain.
+        c. You can perform similar operations using a common method name.
+        d. It provides compile-time polymorphism.
+
+========================================================================================
+
+
+03. How many ways can we achieve Method Overloading?
+
+    - There are three commonly used ways.
+
+    A. Different number of parameters
+        - Here, the method name is the same, but the number of parameters is different.
+                public class Student {
+
+                    public void display() {
+                        System.out.println("No student details");
+                    }
+
+                    public void display(String name) {
+                        System.out.println("Student Name: " + name);
+                    }
+
+                    public void display(String name, int age) {
+                        System.out.println("Name: " + name);
+                        System.out.println("Age: " + age);
+                    }
+
+                    public static void main(String[] args) {
+
+                        Student student = new Student();
+
+                        student.display();
+
+                        student.display("Saikiran");
+
+                        student.display("Saikiran", 28);
+                    }
+                }
+
+
+
+
+
+    B. Different data types of parameters
+        - Here, the number of parameters is the same, but their data types are different.
+
+                public class Calculator {
+
+                    public void multiply(int a, int b) {
+                        System.out.println(a * b);
+                    }
+
+                    public void multiply(double a, double b) {
+                        System.out.println(a * b);
+                    }
+
+                    public void multiply(float a, float b) {
+                        System.out.println(a * b);
+                    }
+
+                    public static void main(String[] args) {
+
+                        Calculator cal = new Calculator();
+
+                        cal.multiply(10, 20);
+
+                        cal.multiply(10.5, 20.5);
+
+                        cal.multiply(10.5f, 20.5f);
+                    }
+                }
+
+
+
+    C. Different order of parameters
+        - Here, the number of parameters is the same, but their order is different.
+                public class Employee {
+
+                    public void details(String name, int age) {
+
+                        System.out.println("Name: " + name);
+                        System.out.println("Age: " + age);
+
+                    }
+
+                    public void details(int age, String name) {
+
+                        System.out.println("Age: " + age);
+                        System.out.println("Name: " + name);
+
+                    }
+
+                    public static void main(String[] args) {
+
+                        Employee emp = new Employee();
+
+                        emp.details("Saikiran", 28);
+
+                        emp.details(28, "Saikiran");
+                    }
+                }
+
+
+
+========================================================================================
+
+
+04. When should we use Method Overloading?
+    - Use method overloading when:
+        a. You are performing the same operation with different inputs.
+        b. You want to provide multiple ways to call a utility method.
+        c. You want to make framework methods reusable.
+        d. You want to improve code readability.
+
+========================================================================================
+
+
+
+========================================================================================
